@@ -230,29 +230,7 @@ screens = [
                     mouse_callbacks = {'Button1': lazy.spawn('rofi -show power-menu -modi power-menu:/home/gzeppeli/.local/bin/rofi-power-menu')},
                 ),
                 widget.Spacer(length = 8),
-                widget.CurrentLayoutIcon(
-                        #background = colors[0],
-                        padding = 3,
-                        scale = 0.7,
-                        decorations=[
-                            BorderDecoration(
-                                colour = colors[1],
-                                border_width = [0, 0, 2, 0],
-                            )
-                        ],     
-                    ),
-                widget.Spacer(length = 8),
-                widget.Clock(
-                    foreground = colors[8],
-                    format = "  %a, %b %d - ⏱ %H:%M",
-                    decorations=[
-                        BorderDecoration(
-                            colour = colors[8],
-                            border_width = [0, 0, 2, 0],
-                        )
-                    ],
-                ),
-                widget.Spacer(length = 8),
+                
                 #widget.CurrentLayout(),
                 widget.GroupBox(
                     active = colors[5],
@@ -268,6 +246,19 @@ screens = [
                     fontsize = 17,
                 ),
                 widget.Spacer(length = 8),
+                widget.CurrentLayoutIcon(
+                        #background = colors[0],
+                        padding = 3,
+                        scale = 0.7,
+                        decorations=[
+                            BorderDecoration(
+                                colour = colors[1],
+                                border_width = [0, 0, 2, 0],
+                            )
+                        ],     
+                    ),
+                widget.Spacer(length = 8),
+
                 widget.Prompt(),
                 widget.Spacer(length = 8),
                 widget.WindowName(
@@ -360,6 +351,17 @@ screens = [
                     decorations=[
                         BorderDecoration(
                             colour = colors[7],
+                            border_width = [0, 0, 2, 0],
+                        )
+                    ],
+                ),
+                widget.Spacer(length = 8),
+                widget.Clock(
+                    foreground = colors[8],
+                    format = "  %a, %b %d - ⏱ %H:%M",
+                    decorations=[
+                        BorderDecoration(
+                            colour = colors[8],
                             border_width = [0, 0, 2, 0],
                         )
                     ],

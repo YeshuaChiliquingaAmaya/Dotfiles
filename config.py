@@ -120,7 +120,10 @@ keys = [
     Key([], "Print", lazy.spawn("flameshot gui")),
 
     #Lock Screen
-    Key([mod], "s", lazy.spawn("betterlockscreen -l")),
+    Key([mod], "q", lazy.spawn("betterlockscreen -l")),
+    
+    #Atajo para boton de inicio
+    Key([mod,"shift"], "q", lazy.spawn("rofi -show power-menu -modi power-menu:/home/gzeppeli/.local/bin/rofi-power-menu")),
 
     # Switch focus of monitors(solo cambia entre monitores no entre escritorios)
     Key([mod], "period", lazy.next_screen()),
@@ -128,9 +131,6 @@ keys = [
 
     #Change keyboarlayout betwen "us", and "latam". Pa los compas: cambia el teclado
     Key([mod], "t", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout."),
-
-    #Atajo para boton de inicio
-    Key([mod,"shift"], "s", lazy.spawn("rofi -show power-menu -modi power-menu:/home/gzeppeli/.local/bin/rofi-power-menu")),
 
     #Atajo para abrir firefox rapido
     Key([mod], "f", lazy.spawn("firefox")),
